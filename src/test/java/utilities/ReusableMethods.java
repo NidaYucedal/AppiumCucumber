@@ -170,7 +170,6 @@ public class ReusableMethods {
                 .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
 
 
-
                 .moveTo(PointOption.point(end_x,end_y)).perform();
 
     }
