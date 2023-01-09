@@ -168,7 +168,6 @@ public class ReusableMethods {
         TouchAction touchAction=new TouchAction<>(Driver.getAppiumDriver());
         touchAction.press(PointOption.point(start_x,start_y))
                 .waitAction(WaitOptions.waitOptions(Duration.ofSeconds(1)))
-
                 .moveTo(PointOption.point(end_x,end_y)).perform();
 
     }
