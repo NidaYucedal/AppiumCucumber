@@ -63,7 +63,6 @@ public class HepsiStepDefs {
 
         scrollAndClick((AndroidDriver<MobileElement>) Driver.getAppiumDriver(),"Mini Nutella Kakaolu Fındık Kreması 25g");
 
-
         //TouchActions action = new TouchActions(driver);
         //action.scroll(element, 10, 100);
         //action.perform();
