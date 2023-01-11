@@ -65,7 +65,6 @@ public class HepsiStepDefs {
 
 
 
-
         //TouchActions action = new TouchActions(driver);
         //action.scroll(element, 10, 100);
         //action.perform();
