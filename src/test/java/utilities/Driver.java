@@ -31,6 +31,7 @@ public class Driver {
             desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, ConfigReader.getProperty("deviceName"));
             //desiredCapabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+ConfigReader.getProperty("appPath"));
             desiredCapabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,"60000");
+            desiredCapabilities.setCapability("autoAcceptAlerts", true);
 
             if (ConfigReader.getProperty("platformName").equals("Android")) {
                 //if you do not provide app path so you should provide "appPackage" and "appActivity"

@@ -11,14 +11,16 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.interactions.touch.TouchActions;
+import org.testng.Assert;
 import screens.HepsiScreen;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
 import static java.time.Duration.ofSeconds;
-import static utilities.ReusableMethods.scrollAndClick;
-import static utilities.ReusableMethods.waitFor;
+import static utilities.ReusableMethods.*;
 
 public class HepsiStepDefs {
 
@@ -29,10 +31,12 @@ public class HepsiStepDefs {
 
 
     @Given("open app")
-    public void open_app() throws InterruptedException  {
+    public void open_app() throws InterruptedException {
 
         ReusableMethods.waitFor(5);
         Driver.getAppiumDriver();
+        waitFor(5);
+        // driver.switchTo().alert().accept();
 
 
     }
@@ -40,54 +44,44 @@ public class HepsiStepDefs {
     @When("verify page is visible")
     public void verifyPageIsVisible() {
 
-        waitFor(7);
-        hepsi.searchBox.click();
-        waitFor(5);
+        Assert.assertTrue(hepsi.home.isDisplayed());
         //((AndroidDriver) driver).openNotifications();
         //((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.BACK));
-
-        try {
-            // Get the alert
-            Alert alert = Driver.getAppiumDriver().switchTo().alert();
-            // Dismiss the alert
-            alert.dismiss();
-        } catch (NoAlertPresentException e) {
-            // No alert is present, so do nothing
-
-        }
     }
 
     @And("click searchbox")
     public void clickSearchbox() {
 
+        hepsi.searchBox.click();
         hepsi.searchBox.sendKeys("nutella");
-        waitFor(5);
+        waitFor(3);
         hepsi.nutella.click();
         waitFor(5);
 
-        scrollAndClick((AndroidDriver<MobileElement>) Driver.getAppiumDriver(),"Mini Nutella Kakaolu Fındık Kreması 25g");
+        scrollAndClick((AndroidDriver<MobileElement>) Driver.getAppiumDriver(), "Mini Nutella Kakaolu Fındık Kreması 25g");
 
-        //TouchActions action = new TouchActions(driver);
-        //action.scroll(element, 10, 100);
-        //action.perform();
-        //element.click();
+        waitFor(2);
+        Assert.assertTrue(hepsi.productName.isDisplayed());
 
-
-        try {
-            new TouchAction(Driver.getAppiumDriver()).press(PointOption.point(988, 693)).
-                    waitAction(WaitOptions.waitOptions(ofSeconds(1)))
-                    .moveTo(PointOption.point(58, 693)).release().perform();
-        } catch (Exception e) {
-            System.out.println("unable to swipe");
-        }
     }
 
     @And("search a product and add to cart")
     public void searchAProductAndAddToCart() {
+
+        waitFor(2);
+        hepsi.addtocart.click();
+
     }
 
     @And("go to cart and verify product is visible")
     public void goToCartAndVerifyProductIsVisible() {
+
+        waitFor(3);
+        hepsi.gotocart.click();
+        Assert.assertTrue(hepsi.productAtTheBasket.isDisplayed());
+        waitFor(2);
+        //hepsi.ok.click();
+
     }
 
     @And("click login and verify")

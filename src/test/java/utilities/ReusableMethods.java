@@ -6,11 +6,15 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -142,7 +146,7 @@ public class ReusableMethods {
 
     public static void scrollAndClick(AndroidDriver<MobileElement> appiumDriver, String visibleText) {
         AndroidDriver<MobileElement> driver = (AndroidDriver<MobileElement>) Driver.getAppiumDriver();
-        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).scrollIntoView(new UiSelector().textContains(\"" + visibleText + "\").instance(0))").click();
+        driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().textContains(\"" + visibleText + "\").instance(0))").click();
     }
 
 
@@ -175,5 +179,45 @@ public class ReusableMethods {
     }
 
 
+
+    public static void robotDoEnter()
+    {
+        try {
+            Robot robot = new Robot();
+            robot.keyPress(KeyEvent.VK_ENTER);
+            robot.delay(300);
+            robot.keyRelease(KeyEvent.VK_ENTER);
+            robot.delay(300);
+        } catch (AWTException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void alertDismiss(){
+
+        try {
+            // Get the alert
+            Alert alert = Driver.getAppiumDriver().switchTo().alert();
+            // Dismiss the alert
+            alert.dismiss();
+        } catch (NoAlertPresentException e) {
+            // No alert is present, so do nothing
+
+        }
+    }
+
 }
 
+//TouchActions action = new TouchActions(Driver.getAppiumDriver());
+//action.scroll(hepsi.product, 700, 1700);
+//action.perform();
+
+
+
+// try {
+// new TouchAction(Driver.getAppiumDriver()).press(PointOption.point(340, 1298)).
+// waitAction(WaitOptions.waitOptions(ofSeconds(2)))
+//  .moveTo(PointOption.point(358, 556)).release().perform();
+// } catch (Exception e) {
+//  System.out.println("unable to swipe");
+// }

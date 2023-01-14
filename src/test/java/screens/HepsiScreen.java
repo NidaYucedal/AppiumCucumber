@@ -14,6 +14,12 @@ public class HepsiScreen {
     }
 
 
+    @AndroidFindBy(id="com.pozitron.hepsiburada:id/image_message_of_day")
+    public MobileElement home;
+
+    @AndroidFindBy(id="com.pozitron.hepsiburada:id/homeComponents")
+    public MobileElement space;
+
     @AndroidFindBy(id = "com.pozitron.hepsiburada:id/etSearchBox")
     public MobileElement searchBox;
 
@@ -22,32 +28,32 @@ public class HepsiScreen {
     public MobileElement nutella;
 
 
-    @AndroidFindBy(xpath = "(//android.widget.Button[@content-desc=\"Sepete Ekle\"])[4]")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Mini Nutella Kakaolu Fındık Kreması 25g']")
     public MobileElement product;
 
 
-    @AndroidFindBy(xpath = "(//android.widget.Button[@content-desc=\"Sepete Ekle\"])[1]")
-    public MobileElement addcart;
+    @AndroidFindBy(id = "com.pozitron.hepsiburada:id/tvProductName")
+    public MobileElement productName;
 
 
     @AndroidFindBy(xpath = "//android.widget.Toast")
     public MobileElement toast;
 
-    @AndroidFindBy(xpath = "//android.widget.FrameLayout[@content-desc=\"Sepetim, 1 yeni bildirim\"]/android.widget.FrameLayout/android.widget.ImageView")
+    @AndroidFindBy(id = "com.pozitron.hepsiburada:id/goBasketTxt")
     public MobileElement gotocart;
 
     @AndroidFindBy(id = "com.pozitron.hepsiburada:id/cartWebView")
     public MobileElement cartview;
 
-    @AndroidFindBy(xpath = "//btnLogin[@text='Giriş yap']")
-    public MobileElement giris;
+    @AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Mini Nutella Kakaolu Fındık Kreması 25g\"])[2]/android.widget.TextView")
+    public MobileElement productAtTheBasket;
 
 
     @AndroidFindBy(id= "com.pozitron.hepsiburada:id/product_detail_add_to_cart_text" )
     public MobileElement addtocart;
 
-    @AndroidFindBy(id= "com.pozitron.hepsiburada:id/goBasketTxt" )
-    public MobileElement gotoBasket;
+    @AndroidFindBy(id= "continue_step_btn" )
+    public MobileElement ok;
 
 
 
