@@ -81,7 +81,6 @@ public class HepsiStepDefs {
             System.out.println("unable to swipe");
         }
 
-
     }
 
     @And("search a product and add to cart")
