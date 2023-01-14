@@ -2,7 +2,10 @@ package stepdefinitions;
 
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,6 +16,7 @@ import screens.HepsiScreen;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import static java.time.Duration.ofSeconds;
 import static utilities.ReusableMethods.scrollAndClick;
 import static utilities.ReusableMethods.waitFor;
 
@@ -67,6 +71,16 @@ public class HepsiStepDefs {
         //action.scroll(element, 10, 100);
         //action.perform();
         //element.click();
+
+
+        try {
+            new TouchAction(Driver.getAppiumDriver()).press(PointOption.point(988, 693)).
+                    waitAction(WaitOptions.waitOptions(ofSeconds(1)))
+                    .moveTo(PointOption.point(58, 693)).release().perform();
+        } catch (Exception e) {
+            System.out.println("unable to swipe");
+        }
+
 
     }
 
