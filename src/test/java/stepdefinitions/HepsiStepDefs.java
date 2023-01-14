@@ -87,7 +87,6 @@ public class HepsiStepDefs {
 
 
 
-
     }
 
     @And("search a product and add to cart")
