@@ -80,7 +80,6 @@ public class HepsiStepDefs {
         } catch (Exception e) {
             System.out.println("unable to swipe");
         }
-
     }
 
     @And("search a product and add to cart")
