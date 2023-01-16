@@ -2,26 +2,22 @@ package stepdefinitions;
 
 
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
+
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
-import io.appium.java_client.touch.WaitOptions;
-import io.appium.java_client.touch.offset.PointOption;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.interactions.touch.TouchActions;
+
 import org.testng.Assert;
 import screens.HepsiScreen;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
-import static java.time.Duration.ofSeconds;
 import static utilities.ReusableMethods.*;
 
 public class HepsiStepDefs {
