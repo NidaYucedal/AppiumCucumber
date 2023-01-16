@@ -4,6 +4,8 @@ package stepdefinitions;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import io.cucumber.java.en.And;
@@ -77,7 +79,10 @@ public class HepsiStepDefs {
     public void goToCartAndVerifyProductIsVisible() {
 
         waitFor(3);
+        driver.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
+        waitFor(3);
         hepsi.gotocart.click();
+        waitFor(2);
         Assert.assertTrue(hepsi.productAtTheBasket.isDisplayed());
         waitFor(2);
         //hepsi.ok.click();

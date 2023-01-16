@@ -39,7 +39,7 @@ public class HepsiScreen {
     @AndroidFindBy(xpath = "//android.widget.Toast")
     public MobileElement toast;
 
-    @AndroidFindBy(id = "com.pozitron.hepsiburada:id/goBasketTxt")
+    @AndroidFindBy(xpath= "//android.widget.FrameLayout[@content-desc=\"Sepetim, 1 yeni bildirim\"]/android.widget.FrameLayout/android.widget.ImageView")
     public MobileElement gotocart;
 
     @AndroidFindBy(id = "com.pozitron.hepsiburada:id/cartWebView")
@@ -56,6 +56,8 @@ public class HepsiScreen {
     public MobileElement ok;
 
 
+    @AndroidFindBy(id = "txtUserName")
+    public MobileElement email;
 
     @AndroidFindBy(id= "btnLogin" )
     public MobileElement login;
