@@ -38,7 +38,7 @@ public class HepsiStepDefs {
         ReusableMethods.waitFor(5);
         Driver.getAppiumDriver();
         waitFor(5);
-        // driver.switchTo().alert().accept();
+        //driver.switchTo().alert().accept();
 
 
     }
