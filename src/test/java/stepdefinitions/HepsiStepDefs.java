@@ -47,8 +47,8 @@ public class HepsiStepDefs {
     public void verifyPageIsVisible() {
 
         Assert.assertTrue(hepsi.home.isDisplayed());
-        //((AndroidDriver) driver).openNotifications();
-        //((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.BACK));
+        driver.openNotifications();
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
     }
 
     @And("click searchbox")
