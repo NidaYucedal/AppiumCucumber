@@ -50,8 +50,13 @@ public class HepsiStepDefs {
     @And("click searchbox")
     public void clickSearchbox() {
 
+        waitFor(5);
+        driver.openNotifications();
+        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+        waitFor(4);
         hepsi.searchBox.click();
         hepsi.searchBox.sendKeys("nutella");
+        driver.pressKey(new KeyEvent(AndroidKey.ENTER));
         waitFor(3);
         hepsi.nutella.click();
         waitFor(5);
