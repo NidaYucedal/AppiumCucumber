@@ -89,7 +89,6 @@ public class HepsiStepDefs {
         //hepsi.ok.click();
 
 
-
     }
 
     @And("click login and verify")
