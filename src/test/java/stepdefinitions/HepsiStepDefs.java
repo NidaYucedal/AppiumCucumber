@@ -88,6 +88,15 @@ public class HepsiStepDefs {
         waitFor(2);
         //hepsi.ok.click();
 
+
+
+
+
+
+
+
+
+
     }
 
     @And("click login and verify")
