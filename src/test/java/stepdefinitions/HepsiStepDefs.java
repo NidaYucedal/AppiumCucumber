@@ -81,7 +81,6 @@ public class HepsiStepDefs {
 
 
 
-
         waitFor(3);
         driver.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
         waitFor(3);
