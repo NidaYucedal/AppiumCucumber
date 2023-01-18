@@ -95,8 +95,6 @@ public class HepsiStepDefs {
 
 
 
-
-
     }
 
     @And("click login and verify")
