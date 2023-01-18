@@ -79,6 +79,10 @@ public class HepsiStepDefs {
     @And("go to cart and verify product is visible")
     public void goToCartAndVerifyProductIsVisible() {
 
+
+
+
+
         waitFor(3);
         driver.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
         waitFor(3);
