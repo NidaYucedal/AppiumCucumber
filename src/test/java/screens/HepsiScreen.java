@@ -8,18 +8,17 @@ import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
 
-
 public class HepsiScreen {
 
     public HepsiScreen() {
-        PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver()),this);
+        PageFactory.initElements(new AppiumFieldDecorator(Driver.getAppiumDriver()), this);
     }
 
 
-    @AndroidFindBy(id="com.pozitron.hepsiburada:id/image_message_of_day")
+    @AndroidFindBy(id = "com.pozitron.hepsiburada:id/image_message_of_day")
     public MobileElement home;
 
-    @AndroidFindBy(id="com.pozitron.hepsiburada:id/homeComponents")
+    @AndroidFindBy(id = "com.pozitron.hepsiburada:id/homeComponents")
     public MobileElement space;
 
     @AndroidFindBy(id = "com.pozitron.hepsiburada:id/etSearchBox")
@@ -37,38 +36,46 @@ public class HepsiScreen {
     @AndroidFindBy(id = "com.pozitron.hepsiburada:id/tvProductName")
     public MobileElement productName;
 
+    @AndroidFindBy(id = "com.pozitron.hepsiburada:id/product_detail_add_to_cart_text")
+    public MobileElement addtocart;
 
     @AndroidFindBy(xpath = "//android.widget.Toast")
     public MobileElement toast;
 
-    @AndroidFindBy(xpath= "//android.widget.FrameLayout[@content-desc=\"Sepetim, 1 yeni bildirim\"]/android.widget.FrameLayout/android.widget.ImageView")
+    @AndroidFindBy(id = "com.pozitron.hepsiburada:id/goBasketTxt")
     public MobileElement gotocart;
 
     @AndroidFindBy(id = "com.pozitron.hepsiburada:id/cartWebView")
     public MobileElement cartview;
 
-    @AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Mini Nutella Kakaolu Fındık Kreması 25g\"])[2]/android.widget.TextView")
+    @AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Nutella Fındık ve Kakao Kreması 400 gr\"])[2]/android.widget.TextView")
     public MobileElement productAtTheBasket;
 
 
-    @AndroidFindBy(id= "com.pozitron.hepsiburada:id/product_detail_add_to_cart_text" )
-    public MobileElement addtocart;
-
-    @AndroidFindBy(id= "continue_step_btn" )
-    public MobileElement ok;
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Alışverişi tamamla']")
+    public MobileElement completeShopping;
 
 
-    @AndroidFindBy(id = "txtUserName")
+    @AndroidFindBy(xpath = "//*[@resource-id='txtUserName']")
     public MobileElement email;
 
-    @AndroidFindBy(id= "btnLogin" )
+    @AndroidFindBy(xpath = "//*[@resource-id='btnLogin']")
     public MobileElement login;
 
 
+    @AndroidFindBy(xpath = "//*[@resource-id='txtPassword']")
+    public MobileElement password;
 
+    @AndroidFindBy(xpath = "//*[@resource-id='btnEmailSelect']")
+    public MobileElement passwordPageLogin;
 
+    @AndroidFindBy(xpath = "//android.widget.FrameLayout[@content-desc=\"Anasayfam\"]/android.widget.FrameLayout/android.widget.ImageView")
+    public MobileElement homePage;
 
+    @AndroidFindBy(id = "com.pozitron.hepsiburada:id/iv_toolbar_user_account_menu")
+    public MobileElement profile;
 
-
+    @AndroidFindBy(id = "com.pozitron.hepsiburada:id/tvUserNameFull")
+    public MobileElement userName;
 
 }

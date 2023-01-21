@@ -31,11 +31,8 @@ public class HepsiStepDefs {
     @Given("open app")
     public void open_app() throws InterruptedException {
 
-        ReusableMethods.waitFor(5);
         Driver.getAppiumDriver();
         waitFor(5);
-        //driver.switchTo().alert().accept();
-
 
     }
 
@@ -43,25 +40,20 @@ public class HepsiStepDefs {
     public void verifyPageIsVisible() {
 
         Assert.assertTrue(hepsi.home.isDisplayed());
-        driver.openNotifications();
-        driver.pressKey(new KeyEvent(AndroidKey.BACK));
+
     }
 
     @And("click searchbox")
     public void clickSearchbox() {
 
-        waitFor(5);
-        driver.openNotifications();
-        driver.pressKey(new KeyEvent(AndroidKey.BACK));
         waitFor(4);
         hepsi.searchBox.click();
         hepsi.searchBox.sendKeys("nutella");
-        driver.pressKey(new KeyEvent(AndroidKey.ENTER));
         waitFor(3);
         hepsi.nutella.click();
         waitFor(5);
 
-        scrollAndClick((AndroidDriver<MobileElement>) Driver.getAppiumDriver(), "Mini Nutella Kakaolu Fındık Kreması 25g");
+        scrollAndClick((AndroidDriver<MobileElement>) Driver.getAppiumDriver(), "Nutella Fındık ve Kakao Kreması 400 gr");
 
         waitFor(2);
         Assert.assertTrue(hepsi.productName.isDisplayed());
@@ -71,34 +63,58 @@ public class HepsiStepDefs {
     @And("search a product and add to cart")
     public void searchAProductAndAddToCart() {
 
-        waitFor(2);
         hepsi.addtocart.click();
-
     }
 
     @And("go to cart and verify product is visible")
     public void goToCartAndVerifyProductIsVisible() {
 
         waitFor(3);
-        driver.pressKey(new KeyEvent().withKey(AndroidKey.BACK));
-        waitFor(3);
         hepsi.gotocart.click();
         waitFor(2);
         Assert.assertTrue(hepsi.productAtTheBasket.isDisplayed());
         waitFor(2);
-        //hepsi.ok.click();
+        hepsi.completeShopping.click();
+        waitFor(3);
 
     }
 
     @And("click login and verify")
     public void clickLoginAndVerify() {
+
+        waitFor(2);
+        hepsi.email.click();
+        hepsi.email.sendKeys("xoyeb32553@moneyzon.com");
+        waitFor(2);
+        hepsi.login.click();
+        waitFor(2);
+
     }
 
     @And("enter valid data")
     public void enterValidData() {
+
+        hepsi.password.click();
+        hepsi.password.sendKeys("1234Jane");
+        waitFor(2);
+        hepsi.passwordPageLogin.click();
+        waitFor(2);
+
     }
 
     @Then("verify user profile")
     public void verifyUserProfile() {
+
+        driver.navigate().back();
+        waitFor(2);
+        hepsi.homePage.click();
+        waitFor(2);
+        hepsi.profile.click();
+        waitFor(2);
+        Assert.assertTrue(hepsi.userName.isDisplayed());
+        waitFor(2);
+
+        driver.closeApp();
+
     }
 }
