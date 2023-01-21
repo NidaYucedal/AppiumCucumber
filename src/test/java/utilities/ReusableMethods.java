@@ -213,7 +213,6 @@ public class ReusableMethods {
 //action.perform();
 
 
-
 // try {
 // new TouchAction(Driver.getAppiumDriver()).press(PointOption.point(340, 1298)).
 // waitAction(WaitOptions.waitOptions(ofSeconds(2)))
