@@ -7,7 +7,7 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-import java.sql.Driver;
+
 
 public class HepsiScreen {
 
