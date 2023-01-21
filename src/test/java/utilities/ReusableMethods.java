@@ -221,3 +221,6 @@ public class ReusableMethods {
 // } catch (Exception e) {
 //  System.out.println("unable to swipe");
 // }
+
+//driver.openNotifications(); tel bildirimlerini aciyor
+// driver.pressKey(new KeyEvent(AndroidKey.ENTER));
