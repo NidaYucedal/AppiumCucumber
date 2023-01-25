@@ -40,9 +40,6 @@ public class Driver {
                 //if you do not provide app path so you should provide "appPackage" and "appActivity"
                 desiredCapabilities.setCapability("appPackage", "com.pozitron.hepsiburada");
                 desiredCapabilities.setCapability("appActivity", "com.hepsiburada.ui.startup.SplashActivity");
-                //com.google.android.calculator");
-                //"com.android.calculator2.Calculator
-                //com.hepsiburada.ui.home.BottomNavigationActivity
                 assert appiumServerURL != null;
                 appiumDriver = new AndroidDriver(appiumServerURL, desiredCapabilities);
             } else if (ConfigReader.getProperty("platformName").equals("iOS")) {
