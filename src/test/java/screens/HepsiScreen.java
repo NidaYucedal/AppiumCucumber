@@ -25,7 +25,6 @@ public class HepsiScreen {
     public MobileElement searchBox;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='nutella']")
-    ////*[@class='suggestion-telPRb5gY5JtrMjuj62z' and text()='nutella']
     public MobileElement nutella;
 
 
