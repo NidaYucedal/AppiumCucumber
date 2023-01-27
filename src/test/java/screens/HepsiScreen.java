@@ -78,5 +78,4 @@ public class HepsiScreen {
     public MobileElement userName;
 
 
-
 }
