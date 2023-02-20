@@ -2,17 +2,11 @@ package stepdefinitions;
 
 
 import io.appium.java_client.MobileElement;
-
-
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
 import org.testng.Assert;
 import screens.HepsiScreen;
 import utilities.Driver;
