@@ -10,8 +10,6 @@ import io.cucumber.java.en.When;
 import org.testng.Assert;
 import screens.HepsiScreen;
 import utilities.Driver;
-import utilities.ReusableMethods;
-
 import static utilities.ReusableMethods.*;
 
 public class HepsiStepDefs {
