@@ -55,7 +55,6 @@ public class HepsiScreen {
     //android.widget.Button[@text='Alışverişi tamamla']
 
 
-
     public MobileElement completeShopping;
 
 
