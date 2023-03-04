@@ -28,7 +28,7 @@ public class HepsiScreen {
     public MobileElement nutella;
 
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Mini Nutella Kakaolu Fındık Kreması 25g']")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Mini Nutella Kakaolu F\u0131nd\u0131k Kremas\u0131 25g']")
     public MobileElement product;
 
 
@@ -47,7 +47,7 @@ public class HepsiScreen {
     @AndroidFindBy(id = "com.pozitron.hepsiburada:id/cartWebView")
     public MobileElement cartview;
 
-    @AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Nutella Fındık ve Kakao Kreması 400 gr\"])[2]/android.widget.TextView")
+    @AndroidFindBy(xpath = "(//android.view.View[@content-desc=\"Nutella F\u0131nd\u0131k ve Kakao Kremas\u0131 400 gr\"])[2]/android.widget.TextView")
     public MobileElement productAtTheBasket;
 
 
