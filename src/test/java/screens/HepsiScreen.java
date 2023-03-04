@@ -60,7 +60,6 @@ public class HepsiScreen {
 
 
 
-
     public MobileElement completeShopping;
 
 
