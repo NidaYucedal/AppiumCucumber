@@ -8,4 +8,6 @@ CAPITAL                    SMALL
 Ö->\u20BA        |    ö->\u00F6
 
 ex= xpath="//*[@text='Do\u011um g\u00FCn\u00FCn kutlu olsun!']"
+"//android.widget.Button[@text='Alı\u015Fveri\u015Fi tamamla']"
+
 

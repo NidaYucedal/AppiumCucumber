@@ -51,7 +51,8 @@ public class HepsiScreen {
     public MobileElement productAtTheBasket;
 
 
-    @AndroidFindBy(xpath = "//android.widget.Button[@text='Alışverişi tamamla']")
+    @AndroidFindBy(xpath = "//android.widget.Button[@text='Alı\u015Fveri\u015Fi tamamla']")
+    //android.widget.Button[@text='Alışverişi tamamla']
     public MobileElement completeShopping;
 
 
