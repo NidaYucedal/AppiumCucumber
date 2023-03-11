@@ -77,4 +77,12 @@ public class HepsiScreen {
     @AndroidFindBy(id = "com.pozitron.hepsiburada:id/tvUserNameFull")
     public MobileElement userName;
 
+
+
+
+
+
+
+
+
 }
