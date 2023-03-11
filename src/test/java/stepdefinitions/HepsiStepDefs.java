@@ -92,7 +92,6 @@ public class HepsiStepDefs {
         hepsi.passwordPageLogin.click();
         waitFor(2);
 
-
     }
 
     @Then("verify user profile")
