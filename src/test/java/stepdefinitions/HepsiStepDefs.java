@@ -93,7 +93,6 @@ public class HepsiStepDefs {
         waitFor(2);
 
 
-
     }
 
     @Then("verify user profile")
