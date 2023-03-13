@@ -84,7 +84,6 @@ public class HepsiStepDefs {
 
 
 
-
     }
 
     @And("enter valid data")
