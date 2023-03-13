@@ -81,7 +81,6 @@ public class HepsiStepDefs {
         hepsi.login.click();
         waitFor(2);
 
-
     }
 
     @And("enter valid data")
