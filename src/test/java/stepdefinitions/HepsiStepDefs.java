@@ -91,6 +91,23 @@ public class HepsiStepDefs {
         waitFor(2);
         hepsi.passwordPageLogin.click();
         waitFor(2);
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 
