@@ -107,7 +107,6 @@ public class HepsiStepDefs {
         waitFor(2);
 
 
-
         driver.closeApp();
 
     }
