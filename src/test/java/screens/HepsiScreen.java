@@ -72,7 +72,6 @@ public class HepsiScreen {
     public MobileElement homePage;
 
 
-
     @AndroidFindBy(id = "com.pozitron.hepsiburada:id/iv_toolbar_user_account_menu")
     public MobileElement profile;
 
