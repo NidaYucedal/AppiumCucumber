@@ -106,7 +106,6 @@ public class HepsiStepDefs {
         Assert.assertTrue(hepsi.userName.isDisplayed());
         waitFor(2);
 
-
         driver.closeApp();
 
     }
